@@ -1,0 +1,70 @@
+@use './00_common/00_common' as *;
+@use './00_common/02_utils' as mixin;
+
+html,body {
+  // height: 100%;
+}
+
+body, #__nuxt {
+  // background-color: rgb(209, 128, 128);
+  // @include mixin.font-size(30);
+
+  // @include mixin.mq-gt(m) {
+    // @include mixin.font-size(50);
+  // }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+.days {
+  font-size: 80%;
+  margin-top: 1em;
+}
+
+header {
+  padding: 2em 1em;
+  border-bottom: solid 1px #ccc;
+}
+footer {
+  margin-top:auto;
+  padding: 1em;
+  background: #efefef;
+}
+
+.wrap {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 4rem 0;
+}
+
+h1 {
+  font-size: 200%;
+  margin:0 0 2rem;
+}
+
+.home-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  li {
+    width: 30%;
+  }
+}
+
+.tag {
+  font-size: 80%;
+  // line-height: 1;
+  /* border: solid 1px orange; */
+  display: inline-flex;
+  color: white;
+  background-color: orange;
+  padding: 0.5em 0.6em 0.4em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}

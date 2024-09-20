@@ -1,0 +1,29 @@
+// Config
+
+$color-base       : #333;
+
+$color-red        : #e60000;
+$color-gry        : #5a5a5a;
+$color-gry-l      : #838383;
+$color-gry-l2     : #acacac;
+$color-gry-l3     : #d6d6d6;
+$color-gry-bg     : #f2f2f2;
+$color-gry-d      : #333;
+
+$grad             : linear-gradient(90deg, rgb(230,0,0) 0%, rgb(165,0,130) 100%);
+
+$break-xs     : 0px;
+$break-s      : 480px;
+// $break-m      : 48em;
+$break-m      : 769px;
+$break-l      : 1024px;
+$break-xl     : 1440px;
+$break-xxl    : 1440px;
+
+
+:root {
+  --color: #000;
+  --color-white:#fff;
+  --color-key:#157b8e;
+  --color-green2:#006241;
+}

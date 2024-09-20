@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/**
+ * Common
+ */
+
+.dg-root {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 500;
+  overflow-x: hidden;
+  font-size: 14px;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "palt";
+
+  // @include vw(24, 640);
+  @media screen and (max-width: 375px){
+    @include vw(14, 375);
+  }
+  // font-size: 14px;
+  @include mq-gt(m) {
+    @include vw(16, 1024);
+  }
+  // @include font-size(24,640);
+
+  // @include mq-gt(l) {
+  //   @include vw(16, 1024);
+  // }
+  @include mq-gt(l) {
+    font-size: 16px;
+  }
+}
+
+body {
+  background: var(--color-white);
+  line-height: 1.625;
+  color: var(--color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

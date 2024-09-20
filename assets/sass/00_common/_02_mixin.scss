@@ -1,0 +1,166 @@
+// @charset "utf-8";
+@use "sass:math";
+@use "_02_config" as *;
+// Mixin
+
+@mixin mq($size) {
+  @if $size == 'xs' {
+    @media screen and (max-width: $break-xs) {
+      @content;
+    }
+  }
+  @else if $size == 's' {
+    @media screen and (max-width: $break-s) {
+      @content;
+    }
+  }
+  @else if $size == 'm' {
+    @media screen and (max-width: $break-m -1) {
+      @content;
+    }
+  }
+  @else if $size == 'l' {
+    @media screen and (max-width: $break-l) {
+      @content;
+    }
+  }
+  @else if $size == 'xl' {
+    @media screen and (max-width: $break-xl) {
+      @content;
+    }
+  }
+  @else if $size == 'xxl' {
+    @media screen and (max-width: $break-xxl) {
+      @content;
+    }
+  }
+}
+
+
+@mixin mq-gt($size) {
+  @if $size == 'xs' {
+    @media screen and (min-width: $break-xs) {
+      @content;
+    }
+  }
+  @else if $size == 's' {
+    @media screen and (min-width: $break-s) {
+      @content;
+    }
+  }
+  @else if $size == 'm' {
+    @media screen and (min-width: $break-m) {
+      @content;
+    }
+  }
+  @else if $size == 'l' {
+    @media screen and (min-width: $break-l) {
+      @content;
+    }
+  }
+  @else if $size == 'xl' {
+    @media screen and (min-width: $break-xl) {
+      @content;
+    }
+  }
+  @else if $size == 'xxl' {
+    @media screen and (min-width: $break-xxl + 1) {
+      @content;
+    }
+  }
+}
+
+@mixin mq-eq($size) {
+  @if $size == 'xs' {
+    @media screen and (max-width: $break-xs) {
+      @content;
+    }
+  }
+  @else if $size == 's' {
+    @media screen and (min-width: $break-xs + 1) and (max-width: $break-s) {
+      @content;
+    }
+  }
+  @else if $size == 'm' {
+    @media screen and (min-width: $break-s + 1) and (max-width: $break-m) {
+      @content;
+    }
+  }
+  @else if $size == 'l' {
+    @media screen and (min-width: $break-m + 1) and (max-width: $break-l) {
+      @content;
+    }
+  }
+  @else if $size == 'xl' {
+    @media screen and (min-width: $break-l + 1) and (max-width: $break-xl) {
+      @content;
+    }
+  }
+  @else if $size == 'xxl' {
+    @media screen and (min-width: $break-xl + 1) {
+      @content;
+    }
+  }
+}
+
+
+@mixin fz($size, $important:false, $base:16, $unit:'%') {
+  @if $important == 'important' or $important == true {
+      $important: ' !important';
+  }@else{
+      $important: '';
+  }
+  @if $unit == '%'{
+      font-size: #{round($size/$base*100)}#{$unit}#{$important};
+  }@else{
+      font-size: $size#{$unit}#{$important};
+  }
+}
+
+
+@mixin clearfix {
+  &:before,
+  &:after {
+      content: " ";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+
+
+@mixin lh-s {
+  line-height: (44/32);
+}
+@mixin lh-m {
+  line-height: (56/32);
+}
+@mixin lh-l {
+  line-height: (60/32);
+}
+
+
+@mixin font-size($size, $base: 16) {
+  font-size: $size + px;
+  font-size: math.div($size,$base) * 1rem;
+}
+
+@function get_vw($size, $viewport:320){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin vw($font_size:10, $viewport:320){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size, $viewport);
+}
+
+@function per($position, $base){
+	@return ($position / $base) * 100%;
+}
+
+@function vh($size,$h:700) {
+  @return (100/$h) * $size * 1vh;
+}

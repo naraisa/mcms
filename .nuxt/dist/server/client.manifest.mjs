@@ -1,0 +1,1 @@
+export { default } from "file:///C:/Users/satosu/OneDrive%20-%20%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9/01_javascript/nuxt3/mcms/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"

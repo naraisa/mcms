@@ -8,5 +8,10 @@ export default defineNuxtConfig({
     apiKey: process.env.MICROCMS_API_KEY,
     target:'server'
   },
-  css: ["~/assets/sass/app.scss"]
+  css: ["~/assets/sass/app.scss"],
+  runtimeConfig: {
+    public: {
+      siteName: 'microCMS + Nuxt',
+    },
+  }
 })

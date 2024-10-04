@@ -40,10 +40,10 @@ const { data } = await useMicroCMSGetListDetail<Blog>({
 if (data) {
   // console.log(data.value.title)
   const currentUrl = `${config.app.baseURL}${params.id}`; // 現在のページのURLを作成
-  console.log(config.app.baseURL)
+  console.log(config.public.siteName)
   console.log(currentUrl)
   useHead({
-    title: data.value.title,
+    title: `${data.value.title} | ${config.public.siteName}`,
     // meta: [
     //   {
     //     property: "og:url",

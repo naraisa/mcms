@@ -102,6 +102,7 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
+    "siteName": "microCMS + Nuxt",
     "microCMS": {
       "serviceDomain": "testnotest",
       "apiKey": "KWIH4AhAJOKbvvvmWlVT1tegZLITgYLIwcxq"

@@ -90,6 +90,8 @@ declare module 'nuxt/schema' {
    },
   }
   interface PublicRuntimeConfig {
+   siteName: string,
+
    microCMS: {
       serviceDomain: string,
 

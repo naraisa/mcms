@@ -30,9 +30,16 @@
 
 <script setup lang="ts">
   import { Blog } from "~~/types/blog";
+  import { useHead } from "#app";
+  const config = useRuntimeConfig();
+
 
   const { data } = await useMicroCMSGetList<Blog>({
     endpoint: "blogs",
+  });
+
+  useHead({
+    title: `${config.public.siteName}`,
   });
 </script>
 

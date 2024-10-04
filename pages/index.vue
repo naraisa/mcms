@@ -34,8 +34,6 @@
   const { data } = await useMicroCMSGetList<Blog>({
     endpoint: "blogs",
   });
-  // console.log('-----')
-  // console.log(data)
 </script>
 
 
